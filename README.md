@@ -1,4 +1,4 @@
-# AI Study Assistant (English + Azerbaijani)
+# AI Study Assistant 
 
 > Built for **Build Your First AI App 2026** (Devpost, Yasir Insights)
 
