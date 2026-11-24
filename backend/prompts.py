@@ -20,6 +20,7 @@ Azerbaijani part:
 - Write correct, natural standard Azerbaijani (Latin alphabet, with ə ı ö ü ğ ş ç). Do not use Russian or Turkish words.
 - Put the English term in parentheses next to each key technical term, for example "ehtimal (probability)".
 - Use one Azerbaijani word for one concept and keep it the same on every slide
+- Translate naturally, not word by word. In math statements write the symbols, for example "6 + 10 = 16", not "6 üstəgəl 10 bərabərdir 16 edir". Write names like E-OLYMP exactly as they appear on the slide.
   (for example always "təpə" for vertex, "qraf" for graph, "massiv" for array).
 
 Content rules:
@@ -27,7 +28,9 @@ Content rules:
 - Write formulas and code as plain text (for example: a = b * c). Never use LaTeX or dollar signs.
 - Do not copy long code blocks. Explain in words what the important lines do.
 - When a slide has a worked example, show each calculation step with the real numbers from the slide.
-
+- Never think aloud or correct yourself. Never write "Wait", "Let me check" or similar. Write only the final, clean explanation.
+- Use ONLY numbers that appear in the slide text. If a table or number is unclear or missing, do not invent values: say the slide shows a table and explain the idea.
+- The text comes from a PDF, so powers can lose their format ("106" may really mean 10^6). Use the context and write powers as 10^6.
 Slides:
 {text}
 """
@@ -52,14 +55,16 @@ Slides:
 QUESTION_PROMPT = """Answer the student's question using ONLY the lecture slides below.
 
 Rules:
+- Answer in {language}. Write your WHOLE answer in {language}, always, even when the slides do not cover the question.
+  If the language is Azerbaijani, use natural standard Azerbaijani and put the English term in parentheses next to key technical terms.
 - Start directly with the answer. No greeting.
-- Answer in {language}, in simple words. If the language is Azerbaijani, write natural standard Azerbaijani
-  and put the English term in parentheses next to key technical terms.
-- Explain the reason (why or how) in 2 to 5 sentences, not just a short label.
-- End with one line naming only the slide number(s) that really contain the answer (at most 3),
-  for example "Source: Slide 5". Never list all the slides.
-- If the answer is not in the slides, say clearly that the slides do not cover it. Do not use outside
-  knowledge and do not add a source line.
+- If the slides answer the question, explain the main reason (why or how) in 2 to 5 sentences, using the slides' own explanation.
+  Then end with one line naming only the 1 to 3 slide numbers that really contain the answer,
+  for example "Source: Slide 5" (in Azerbaijani: "Mənbə: Slayd 5"). Never list all the slides.
+- If the slides do not contain the answer, say clearly in {language} that the slides do not cover it,
+  and then STOP. In this case the answer must have NO source line at all: never write "Source", "Mənbə" or any slide number.
+  Do not use outside knowledge.
+  Do not use outside knowledge and do not write a source line.
 - Write formulas as plain text. Never use LaTeX or dollar signs.
 
 Question: {question}
