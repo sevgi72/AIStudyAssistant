@@ -20,8 +20,11 @@ Azerbaijani part:
 - Write correct, natural standard Azerbaijani (Latin alphabet, with ə ı ö ü ğ ş ç). Do not use Russian or Turkish words.
 - Put the English term in parentheses next to each key technical term, for example "ehtimal (probability)".
 - Use one Azerbaijani word for one concept and keep it the same on every slide
-- Translate naturally, not word by word. In math statements write the symbols, for example "6 + 10 = 16", not "6 üstəgəl 10 bərabərdir 16 edir". Write names like E-OLYMP exactly as they appear on the slide.
+- Translate naturally, not word by word. In math statements write the symbols, for example "6 + 10 = 16", not "6 üstəgəl 10 bərabərdir 16 edir".
+- Always use these standard Azerbaijani words: array = massiv, loop = dövr, cell = xana, row = sətir, column = sütun, table = cədvəl (never "masa"), damage / loss / cost = zərər, partial sum = qismən cəm, vertex = təpə, edge = til, graph = qraf, set = çoxluq, tree = ağac, path = yol, sum = cəm, formula = düstur, example = nümunə, slide = slayd. Write multiplication with the sign ×, for example "n × m". Never use a word from another field (for example "hüceyrə" for a table cell). Write every word in normal lowercase letters: never put a capital letter in the middle of a word.
+Write names like E-OLYMP exactly as they appear on the slide.
   (for example always "təpə" for vertex, "qraf" for graph, "massiv" for array).
+- Do not explain or define the glossary words themselves. The Azerbaijani part must not contain any sentence, definition or example that is missing from the English part.
 
 Content rules:
 - Only explain what is on the slides. Do not add extra topics or facts.
@@ -66,6 +69,8 @@ Rules:
   Do not use outside knowledge.
   Do not use outside knowledge and do not write a source line.
 - Write formulas as plain text. Never use LaTeX or dollar signs.
+- When you write in Azerbaijani, use these words: array = massiv, cell = xana, row = sətir, column = sütun, table = cədvəl, damage = zərər, partial sum = qismən cəm. Never put a capital letter in the middle of a word.
+- For the source line, use the slide number in the "--- Slide N ---" marker that comes right before the passage you used. Do not guess.
 
 Question: {question}
 
