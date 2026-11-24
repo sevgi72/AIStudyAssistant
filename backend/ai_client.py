@@ -57,7 +57,7 @@ def _error_code(error: Exception) -> int | None:
     if isinstance(code, int):
         return code
     text = str(error)
-    for c in (429, 500, 503, 401, 403, 400, 404):
+    for c in (429, 500, 503, 504, 401, 403, 400, 404):
         if str(c) in text:
             return c
     return None
@@ -72,7 +72,7 @@ def _friendly_message(code: int | None, error: Exception) -> str:
         return f"The model '{config.MODEL_NAME}' was not found. Change GEMINI_MODEL in the settings."
     if code == 400:
         return f"The AI could not process this request: {error}"
-    if code in (500, 503):
+    if code in (500, 503, 504):
         return "The AI service is busy right now. Please try again in a moment."
     return f"AI request failed: {error}"
 

@@ -51,6 +51,6 @@ TOP_K_CHUNKS = _get_int("TOP_K_CHUNKS", 3)         # chunks used for quiz / Q&A
 
 # AI call behaviour
 TEMPERATURE = 0.3        # low = more factual, less creative
-MAX_RETRIES = 2          # tries per model when the API is busy or rate-limited
+MAX_RETRIES = 3       # tries per model when the API is busy or rate-limited
 REQUEST_TIMEOUT_SECONDS = _get_int("REQUEST_TIMEOUT_SECONDS", 90)  # stop waiting after this
 RETRY_BASE_SECONDS = 2   # waits 2s, then 4s between retries
